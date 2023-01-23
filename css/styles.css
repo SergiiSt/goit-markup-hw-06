@@ -490,7 +490,6 @@ img {
 }
 
 .footer-soc {
-  margin-right: 80px;
 }
 
 .soc-title {
@@ -534,9 +533,11 @@ img {
   background-color: var(--soc-links-hover);
 }
 
+.subscribe-wrap {
+  margin-left: auto;
+}
+
 .subscribe-area {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -580,8 +581,7 @@ img {
   width: 165px;
   height: 40px;
 
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -595,16 +595,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscribe-btn:hover, .subscribe-btn:focus {
+.subscribe-btn:hover,
+.subscribe-btn:focus {
   background-color: var(--hover-focus);
 }
 
 .footer-btn-icon {
   fill: var(--hero-title-color);
-  
 }
 
 /* -----------------modal----------------- */
@@ -625,12 +625,11 @@ img {
   top: 50%;
   left: 50%;
   width: 408px;
-  min-height: 576px;
   background-color: var(--modal-color);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 24px;
+  padding: 72px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -650,6 +649,8 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover {
@@ -664,7 +665,6 @@ img {
 }
 
 .modal-title {
-  font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -672,13 +672,16 @@ img {
   letter-spacing: 0.02em;
 
   color: #2e2f42;
-  padding-top: 48px;
   margin-bottom: 14px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 8px;
 }
 
 .modal-input-title {
   display: block;
-  font-family: "Roboto";
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
@@ -697,9 +700,14 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 8px;
   position: relative;
   padding-left: 38px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+  border-color: var(--active-color);
 }
 
 .input:focus + .modal-name-icon {
@@ -710,6 +718,12 @@ img {
   position: absolute;
   left: 19px;
   top: 3px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-label-text {
+  display: block;
+  margin-bottom: 16px;
 }
 
 .user-text {
@@ -719,7 +733,12 @@ img {
   border-radius: 4px;
   resize: none;
   padding: 8px 16px;
-  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-text:focus {
+border-color: var(--active-color);
 }
 
 .user-text::placeholder {
@@ -732,6 +751,9 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.checkbox-label {
+}
+
 .checkbox-custom {
   width: 16px;
   height: 16px;
@@ -741,7 +763,6 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
-  margin-bottom: 24px;
 }
 
 .privacy-policy {
@@ -765,7 +786,7 @@ img {
 }
 
 .modal-send-btn {
-  font-family: "Roboto";
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -776,6 +797,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  margin-top: 24px;
 
   width: 169px;
   height: 56px;
